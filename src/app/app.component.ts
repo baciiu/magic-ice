@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, NgIterable} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'magic-ice';
+  cards = [1,1,1,1,1,1,1,1];
 }
