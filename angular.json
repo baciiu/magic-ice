@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "magic-ice:build:production"
+              "buildTarget": "magic-ice:build:production"
             },
             "development": {
-              "browserTarget": "magic-ice:build:development"
+              "buildTarget": "magic-ice:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "magic-ice:build"
+            "buildTarget": "magic-ice:build"
           }
         },
         "test": {
