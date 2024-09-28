@@ -19,6 +19,8 @@
     "@angular/platform-browser": "^17.3.12",
     "@angular/platform-browser-dynamic": "^17.3.12",
     "@angular/router": "^17.3.12",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
     "analytics": "^0.8.14",
     "bootstrap": "^5.2.3",
     "ngx-bootstrap": "^11.0.2",

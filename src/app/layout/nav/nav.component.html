@@ -2,17 +2,25 @@
   <p-toolbar [ngStyle]="{'background-color':'#183462'}">
     <div class="p-toolbar-group-start">
       <img src="../../../assets/logo-sample.png" width="200" height="100" />
-      <a class="mx-3">Despre noi</a>
-      <a class="mr-3"> Produse</a>
-      <a class="mr-2">Contact</a>
+      <a class="mx-3">{{ 'about-us' | translate }}</a>
+      <a class="mr-3"> {{ 'products' | translate }}</a>
+      <a class="mr-2">{{ 'contact' | translate }}</a>
     </div>
     <div class="p-toolbar-group-end">
       <input class="mr-2" type="text" placeholder=" cautare " pInputText />
-      <a class="mr-2">EN</a>
-      <p-button>|||</p-button>
-    </div>
+
+      <p-selectButton
+        [options]="languages"
+        [(ngModel)]="value"
+        (onOptionClick)="changeLanguage(value)"
+        optionLabel="label"
+        optionValue="value" />
+
+        </div>
+
   </p-toolbar>
 </div>
+
 <div>
   <p-tabView>
     <p-tabPanel header="Prafuri de Inghetata">

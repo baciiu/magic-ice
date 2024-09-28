@@ -6,16 +6,12 @@ import {FormsModule} from "@angular/forms";
 import {TagModule} from "primeng/tag";
 import {CommonModule} from "@angular/common";
 import {CardComponent} from "../../../layout/card/card.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {BrowserModule} from "@angular/platform-browser";
 import {InputTextModule} from "primeng/inputtext";
 
 @Component({
   selector: 'app-standard',
   standalone: true,
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     Button,
     DataViewModule,
     DropdownModule,
@@ -27,20 +23,6 @@ import {InputTextModule} from "primeng/inputtext";
 })
 export class StandardComponent {
   productNames: string[] = [
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
-    "Heading",
     "Heading",
   ];
   sortOrder: unknown;
