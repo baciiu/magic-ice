@@ -12,6 +12,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { FormsModule } from '@angular/forms';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { SidebarModule } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-nav',
@@ -34,6 +35,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     FormsModule,
     SplitButtonModule,
     SelectButtonModule,
+    SidebarModule,
   ],
   standalone: true,
 })
@@ -44,6 +46,7 @@ export class NavComponent {
     { label: 'RO', value: 'ro' },
   ];
   value!: string;
+  visibleSidebar = false;
 
   constructor(private translate: TranslateService) {
     translate.addLangs(this.languages.map((option) => option.value));

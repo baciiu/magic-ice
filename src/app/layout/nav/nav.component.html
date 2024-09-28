@@ -1,66 +1,75 @@
-<div>
-    <p-toolbar [ngStyle]="{ 'background-color': '#183462' }">
-        <div class="p-toolbar-group-start">
-            <img src="../../../assets/logo-sample.png" width="200" height="100"/>
-            <a class="mx-3">{{ "about-us" | translate }}</a>
-            <a class="mr-3"> {{ "products" | translate }}</a>
-            <a class="mr-2">{{ "contact" | translate }}</a>
-        </div>
-        <div class="p-toolbar-group-end">
-            <input class="mr-2" type="text" placeholder=" cautare " pInputText/>
+<div class="flex justify-content-between align-items-center flex-wrap">
+    <div class="">
+        <h1 class="ml-5 font-bold">Magic Ice</h1>
+    </div>
 
-            <p-selectButton
-                    [options]="languages"
-                    [(ngModel)]="value"
-                    (onOptionClick)="changeLanguage(value)"
-                    optionLabel="label"
-                    optionValue="value"
-            />
-        </div>
-    </p-toolbar>
-</div>
+    <div class="d-flex flex-row hidden lg:block">
+        <p-button [text]="true" [plain]="true" class="mx-3"
+        >{{ "about-us" | translate }}
+        </p-button>
+        <p-button [text]="true" [plain]="true" class="mr-3">
+            {{ "products" | translate }}
+        </p-button>
+        <p-button [text]="true" [plain]="true" class="mr-2"
+        >{{ "contact" | translate }}
+        </p-button>
+    </div>
 
-<div>
-    <p-tabView>
-        <p-tabPanel header="Prafuri de Inghetata">
-            <div class="flex flex-row">
-                <div class="mx-2">Retete pentru Aparate</div>
-                <div class="mx-2">Standard</div>
-                <div class="mx-2">Premium</div>
-            </div>
-        </p-tabPanel>
-        <p-tabPanel header="Granita si Slush ">
-            <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non
-                numquam eius modi.
-            </p>
-        </p-tabPanel>
-        <p-tabPanel header="Topping">
-            <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-                et quas molestias excepturi sint occaecati cupiditate non provident,
-                similique sunt in culpa qui officia deserunt mollitia animi, id est
-                laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-                distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
-                cumque nihil impedit quo minus.
-            </p>
-        </p-tabPanel>
-        <p-tabPanel header="Accesorii">
-            <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-                et quas molestias excepturi sint occaecati cupiditate non provident,
-                similique sunt in culpa qui officia deserunt mollitia animi, id est
-                laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-                distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
-                cumque nihil impedit quo minus.
-            </p>
-        </p-tabPanel>
-    </p-tabView>
+    <div class="flex flex-row hidden lg:block">
+        <input
+                class="group mr-2 h-2rem hidden lg:block"
+                type="text"
+                placeholder=" cautare "
+                pInputText
+        />
+    </div>
+
+    <div class="flex flex-row">
+        <p-button
+                size="small"
+                class="m-0 p-0"
+                [rounded]="true"
+                [text]="true"
+                [plain]="language != 'en'"
+                (onClick)="changeLanguage('en')"
+        >EN
+        </p-button>
+        <p-button
+                size="small"
+                [plain]="language != 'ro'"
+                class="m-0 p-0"
+                [text]="true"
+                [rounded]="true"
+                (onClick)="changeLanguage('ro')"
+        >RO
+        </p-button>
+    </div>
+
+    <div class="flex flex-row mr-0">
+        <p-button
+                class="menu-button block md:hidden"
+                size="small"
+                [rounded]="true"
+                [text]="true"
+                type="button"
+                (click)="visibleSidebar = true"
+                icon="pi pi-align-justify"
+        ></p-button>
+    </div>
+
+    <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000">
+        <h1 style="font-weight: normal">Left Sidebar</h1>
+        <p-button
+                type="button"
+                (click)="visibleSidebar = false"
+                label="Save"
+                styleClass="p-button-success"
+        ></p-button>
+        <p-button
+                type="button"
+                (click)="visibleSidebar = false"
+                label="Cancel"
+                styleClass="p-button-secondary"
+        ></p-button>
+    </p-sidebar>
 </div>

@@ -10,6 +10,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { Button } from 'primeng/button';
 import { PrimeTemplate } from 'primeng/api';
 import { SidebarModule } from 'primeng/sidebar';
+import { CardComponent } from './layout/card/card.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { SidebarModule } from 'primeng/sidebar';
     Button,
     PrimeTemplate,
     SidebarModule,
+    CardComponent,
   ],
   templateUrl: './app.component.html',
   standalone: true,

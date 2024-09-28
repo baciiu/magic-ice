@@ -3,8 +3,10 @@
   "about-us": "Despre Noi",
   "products": "Produse",
   "contact": "Contact",
-  "copyright": "Copyright © magic-ice.ro Toate drepturile rezervate ",
+  "copyright": "Copyright © magic-ice.ro",
+  "rights": "Toate drepturile rezervate.",
   "email": "office@magic-ice.ro",
   "phone": "0722-266555",
-  "footer-text-links": "Urmareste-ne:"
+  "footer-text-links": "Urmareste-ne:",
+  "discover-more": "Descopera mai multe"
 }
