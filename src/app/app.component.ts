@@ -5,8 +5,11 @@ import { HeaderComponent } from './layout/header/header.component';
 import { StandardComponent } from './pages/ice/standard/standard.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
+import { AvatarModule } from 'primeng/avatar';
+import { Button } from 'primeng/button';
+import { PrimeTemplate } from 'primeng/api';
+import { SidebarModule } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +21,10 @@ import { HomeComponent } from './pages/home/home.component';
     StandardComponent,
     FooterComponent,
     HomeComponent,
+    AvatarModule,
+    Button,
+    PrimeTemplate,
+    SidebarModule,
   ],
   templateUrl: './app.component.html',
   standalone: true,
@@ -26,6 +33,5 @@ import { HomeComponent } from './pages/home/home.component';
 export class AppComponent {
   constructor(private translate: TranslateService) {}
 
-  title = 'magic-ice';
-  cards = [1, 1, 1, 1, 1, 1, 1, 1];
+  visibleSidebar1: boolean = false;
 }

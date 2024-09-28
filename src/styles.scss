@@ -5,3 +5,19 @@
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.p-button {
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.p-inputtext {
+  color: #333;
+  border: 1px solid #ccc;
+}
