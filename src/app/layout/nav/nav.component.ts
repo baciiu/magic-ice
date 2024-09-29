@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SidebarModule } from 'primeng/sidebar';
+import { DividerModule } from 'primeng/divider';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -36,6 +38,7 @@ import { SidebarModule } from 'primeng/sidebar';
     SplitButtonModule,
     SelectButtonModule,
     SidebarModule,
+    DividerModule,
   ],
   standalone: true,
 })
@@ -48,7 +51,10 @@ export class NavComponent {
   value!: string;
   visibleSidebar = false;
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private router: Router,
+  ) {
     translate.addLangs(this.languages.map((option) => option.value));
     translate.setDefaultLang(this.language);
   }
@@ -62,5 +68,9 @@ export class NavComponent {
       this.language = lang;
       this.translate.use(lang);
     }
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([`/${page}`]);
   }
 }

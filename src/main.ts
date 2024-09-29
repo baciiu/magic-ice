@@ -9,6 +9,8 @@ import {
 } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { routes } from './app/app-routing.module';
+import { provideRouter } from '@angular/router';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient,
@@ -16,6 +18,7 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideRouter(routes),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
     importProvidersFrom(

@@ -57,19 +57,65 @@
         ></p-button>
     </div>
 
-    <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000">
-        <h1 style="font-weight: normal">Left Sidebar</h1>
-        <p-button
-                type="button"
-                (click)="visibleSidebar = false"
-                label="Save"
-                styleClass="p-button-success"
-        ></p-button>
-        <p-button
-                type="button"
-                (click)="visibleSidebar = false"
-                label="Cancel"
-                styleClass="p-button-secondary"
-        ></p-button>
+    <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [modal]="false">
+        <ul class="no-dots align-items-center">
+            <li>
+                <p-button (click)="navigateTo('home')" [text]="true">{{ "home" | translate }}</p-button>
+            </li>
+            <li>
+                <p-button (click)="navigateTo('brand')" [text]="true">{{ "brand" | translate }}</p-button>
+            </li>
+            <li>
+                <p-button (click)="navigateTo('contact')" [text]="true">{{ "contact" | translate }}</p-button>
+            </li>
+            <li>
+                <p-button (click)="navigateTo('products')" [text]="true">{{ "products" | translate }}</p-button>
+            </li>
+
+            <li>
+                <p-button (click)="navigateTo('ice-powder')" [text]="true"
+                ><i class="pi pi-angle-right"></i> &nbsp;{{
+                        "ice-powder" | translate
+                    }}
+                </p-button>
+            </li>
+
+            <li>
+                <p-button (click)="navigateTo('standard-powder')" [text]="true">
+                    <i class="pi pi-angle-double-right"></i> &nbsp;
+                    {{ "ice-powder-standard" | translate }}
+                </p-button>
+            </li>
+            <li>
+                <p-button (click)="navigateTo('premium-powder')" [text]="true">
+                    <i class="pi pi-angle-double-right"></i> &nbsp;{{
+                        "ice-powder-premium" | translate
+                    }}
+                </p-button>
+            </li>
+
+            <li>
+                <p-button (click)="navigateTo('granita')" [text]="true"
+                ><i class="pi pi-angle-right"></i> &nbsp;{{
+                        "granita-slush" | translate
+                    }}
+                </p-button>
+            </li>
+            <li>
+                <p-button (click)="navigateTo('topping')" [text]="true" href="app/pages/topping"
+                ><i class="pi pi-angle-right"></i> &nbsp;{{
+                        "toppings" | translate
+                    }}
+                </p-button
+                >
+            </li>
+            <li>
+                <p-button (click)="navigateTo('accessories')" [text]="true"
+                ><i class="pi pi-angle-right"></i> &nbsp;{{
+                        "accessories" | translate
+                    }}
+                </p-button>
+            </li>
+        </ul>
     </p-sidebar>
 </div>
